@@ -1,0 +1,15 @@
+.stars-rating {
+    display: flex;
+    flex-direction: row;
+    /*gap: 6px;*/
+    align-items: center;
+    justify-content: space-between;
+    height: 24px;
+    width: 40%;
+}
+
+.stars-rating img {
+    position: relative;
+    height: 100%;
+    width: auto;
+}
