@@ -1,5 +1,6 @@
 import axios from 'axios';
+import {BASE_URL} from "../constants";
 
 export const api = axios.create({
-    baseURL: 'https://shift-backend.onrender.com'
+    baseURL: BASE_URL
 });

@@ -1,47 +1,45 @@
 import './FilmCard.css'
 import StarsRating from "../ui/StarsRating.tsx";
+import {Film} from "../types";
+import {BASE_URL} from "../constants"
 
-const FilmCard = () => {
 
-    const src='https://shift-backend.onrender.com/static/images/cinema/film_1.webp';
-    const title = 'Title';
-    const subTitle = 'SubTitle';
-    const rating = '8';
-    const ratingKinopoisk = '8';
-    const country = 'USA';
-    const year = '2023';
-    const kind = 'fantasy';
+const FilmCard = (props: {film: Film}) => {
+
+    const film = props.film;
+    const genres = film.genres.join(", ");
+    //TODO: T.T дата на русском
+    const year  = film.releaseDate.match(/\d{4}$/) as string;
 
     return (
-        <>
-
-            <div className="film-card">
-                <div className="img-container">
-                    <img src={src} alt={`Poster ${title}`}/>
-                    <div className="production-and-kind">
-                        <p className="kind">{kind}</p>
-                        <p className="production">{`${country}, ${year}`}</p>
-                    </div>
-                </div>
-
-                <div className="film-card-data">
-                    <div>
-                        <h3>{title}</h3>
-                        <p>{subTitle}</p>
-                    </div>
-
-                    <div>
-                        <StarsRating rating={rating as number}/>
-                        <p>{`Kinopoisk - ${ratingKinopoisk}`}</p>
-                    </div>
-
-                    <button>
-                        More
-                    </button>
+        <div className="film-card">
+            <div className="img-container">
+                <img src={`${BASE_URL}${film.img}`} alt={`Poster ${film.name}`}/>
+                <div className="production-and-kind">
+                    <p className="kind">{genres}</p>
+                    <p className="production">
+                        {film.country.name}
+                        {!!year && <>, {year}</>}
+                    </p>
                 </div>
             </div>
 
-        </>
+            <div className="film-card-data">
+                <div>
+                    <h3>{film.name}</h3>
+                    <p>{film.originalName}</p>
+                </div>
+
+                <div>
+                    <StarsRating rating={film.userRatings.imdb as number}/>
+                    <p>{`Kinopoisk - ${film.userRatings.kinopoisk}`}</p>
+                </div>
+
+                <button>
+                    Подробнее
+                </button>
+            </div>
+        </div>
     )
 }
 

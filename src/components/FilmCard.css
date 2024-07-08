@@ -1,6 +1,6 @@
 
 .film-card {
-    width: fit-content;
+    width: 300px;
     text-align: center;
     margin: 0 auto;
     background: white;
@@ -17,6 +17,8 @@
     position: absolute;
     bottom: 0;
     right: 0;
+    width: fit-content;
+    max-width: 50%;
     padding: 8px 16px;
     background: #F5F5F8;
     border-radius: 8px 0 0 0;
@@ -37,6 +39,9 @@
     font-weight: 500;
     margin: 0;
     color: #141C24;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .film-card img {
@@ -64,6 +69,10 @@
     font-size: 20px;
     font-weight: 600;
     color: #141C24;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+
 }
 
 .film-card-data p {
