@@ -1,11 +1,11 @@
 import activeStar from "../assets/starActive.svg"
 import defaultStar from "../assets/starDefault.svg"
-import "./StarsRating.css"
+import "./Rating.css"
 
 const MAX_RATING = 5;
-const StarsRating = ({rating} : { rating: number }) => {
+const Rating = (props : { rating: string, kinopoiskRating: string }) => {
 
-    rating = Math.round(rating / 2);
+    const rating = Math.round((props.rating as number) / 2);
 
     const stars = [];
     for (let i = 0; i < rating; i++){
@@ -17,10 +17,13 @@ const StarsRating = ({rating} : { rating: number }) => {
     }
 
     return (
-        <div className="stars-rating">
-            {stars}
+        <div>
+            <div className="stars-rating">
+                {stars}
+            </div>
+            <p className="kinopoisk-rating">{`Kinopoisk - ${props.kinopoiskRating}`}</p>
         </div>
     );
 }
 
-export default StarsRating
+export default Rating

@@ -1,7 +1,9 @@
 import './FilmCard.css'
-import StarsRating from "../ui/StarsRating.tsx";
+import Rating from "../ui/Rating.tsx";
 import {Film} from "../types";
-import {BASE_URL} from "../constants"
+import {BASE_URL, MORE_BUTTON} from "../constants"
+import FilmPoster from "../ui/FilmPoster.tsx";
+import {Link, NavLink} from "react-router-dom";
 
 
 const FilmCard = (props: {film: Film}) => {
@@ -13,8 +15,7 @@ const FilmCard = (props: {film: Film}) => {
 
     return (
         <div className="film-card">
-            <div className="img-container">
-                <img src={`${BASE_URL}${film.img}`} alt={`Poster ${film.name}`}/>
+            <FilmPoster img={film.img} name={film.name}>
                 <div className="production-and-kind">
                     <p className="kind">{genres}</p>
                     <p className="production">
@@ -22,7 +23,7 @@ const FilmCard = (props: {film: Film}) => {
                         {!!year && <>, {year}</>}
                     </p>
                 </div>
-            </div>
+            </FilmPoster>
 
             <div className="film-card-data">
                 <div>
@@ -30,14 +31,11 @@ const FilmCard = (props: {film: Film}) => {
                     <p>{film.originalName}</p>
                 </div>
 
-                <div>
-                    <StarsRating rating={film.userRatings.imdb as number}/>
-                    <p>{`Kinopoisk - ${film.userRatings.kinopoisk}`}</p>
-                </div>
+                <Rating rating={film.userRatings.imdb} kinopoiskRating={film.userRatings.kinopoisk}/>
 
-                <button>
-                    Подробнее
-                </button>
+
+                <Link className="more-button" to={`/film/${film.id}`}>{MORE_BUTTON}</Link>
+
             </div>
         </div>
     )

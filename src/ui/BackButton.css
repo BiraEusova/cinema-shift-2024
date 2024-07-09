@@ -1,19 +1,17 @@
-.header-button{
-    /*background-color: rgba(255, 255, 255, 0);*/
+.back-button {
     text-decoration: none;
 
     font-family: Inter, sans-serif;
     font-weight: 500;
     font-size: 16px;
-    color: #344051;
+    color: #637083;
 
     align-items: center;
     height: fit-content;
-    max-height: 40px;
     display: flex;
     gap: 10px;
 }
 
-.header-button:hover{
-    color: #9534D2;
+.back-button:hover{
+    color: #141C24;
 }

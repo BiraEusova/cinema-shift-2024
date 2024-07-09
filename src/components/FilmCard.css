@@ -55,6 +55,7 @@
     display: block;
     object-fit: cover;
 }
+
 .film-card-data {
     margin-top: 16px;
     display: flex;
@@ -85,10 +86,9 @@
     color: #637083;
 }
 
-.film-card-data button {
-    border: none;
+.more-button {
+    text-decoration: none;
     border-radius: 16px;
-    width: 100%;
     padding: 16px 32px;
     background: #9534D2;
     color: white;

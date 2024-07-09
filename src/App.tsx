@@ -16,11 +16,16 @@ import {
     RouterProvider,
 } from "react-router-dom";
 import Affiche from "./pages/Affiche.tsx";
+import FilmPage from "./pages/FilmPage.tsx";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <Affiche/>,
+    },
+    {
+        path: "film/:id",
+        element: <FilmPage/>,
     },
 ]);
 const App = () => {

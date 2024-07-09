@@ -13,16 +13,20 @@ interface ResponseFilmsToday extends Response{
     films: [Film]
 }
 
+interface ResponseFilm extends Response{
+    film: Film
+}
+
 export const getFilmsToday = async () => {
     const response = await api.get<ResponseFilmsToday>('/cinema/today')
     return response.data as ResponseFilmsToday;
-        // .catch((e: AxiosError) => {
-        //     throw e;
-        // });
 }
 
-export const getFilm = (filmId) =>
-    api.get(`/cinema/film/${filmId}`);
+export const getFilm = async (filmId) => {
+    const response = await api.get<ResponseFilm>(`/cinema/film/${filmId}`);
+    return response.data as ResponseFilm;
+}
+
 
 export const getFilmSchedule = (filmId) =>
     api.get(`/cinema/film/${filmId}/schedule`);
