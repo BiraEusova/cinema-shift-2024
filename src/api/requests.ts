@@ -1,19 +1,25 @@
 import { api } from './instance';
-import {AxiosError} from "axios";
+import {AxiosError, AxiosResponse} from "axios";
 import {Film} from "../types";
 
 //TODO: как правильно типизировать запросы
 
-type FilmsTodayResp = {
-    success: string,
+interface Response {
+    success: boolean, //TODO: всегда приходит 200, а ошибка проверяется по success?
+    reason: string
+}
+
+interface ResponseFilmsToday extends Response{
     films: [Film]
 }
-export const getFilmsToday  = () =>
-    api.get<FilmsTodayResp>('/cinema/today')
-        .then((res) => res.data)
-        .catch((e: AxiosError) => {
-            console.log(e);
-        });
+
+export const getFilmsToday = async () => {
+    const response = await api.get<ResponseFilmsToday>('/cinema/today')
+    return response.data as ResponseFilmsToday;
+        // .catch((e: AxiosError) => {
+        //     throw e;
+        // });
+}
 
 export const getFilm = (filmId) =>
     api.get(`/cinema/film/${filmId}`);

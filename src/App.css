@@ -7,53 +7,5 @@
   text-align: center;
 }
 
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 100%;
-  height: fit-content;
-  padding: 12px 0;
-  background: white;
-  border-bottom: 1px solid #CED2DA;
-}
-
-.header-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 960px;
-}
-
-.header-nav {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-  align-items: center;
-}
-
-.title {
-  text-align: left;
-  font-family: Inter, sans-serif;
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 16px;
-}
-
-.content-container {
-  margin-top: 48px;
-  padding-bottom: 48px;
-  width: 960px;
-}
-
-.card-grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 48px 20px;
-  margin: 16px 0px 0px;
-}
 
 

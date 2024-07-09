@@ -3,10 +3,10 @@ const HeaderButton = ({icon, text} : {icon: string, text: string}) => {
 
     //TODO: сделать чтобы при наведении на кнопку иконка тоже меняла цвет
     return (
-        <button className={'header-button'}>
+        <a className={'header-button'} href="#">
             <img src={icon} alt={text}/>
             {text}
-        </button>
+        </a>
     )
 }
 

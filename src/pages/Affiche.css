@@ -1,0 +1,20 @@
+.title {
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0 16px;
+}
+
+.content-container {
+    margin-top: 48px;
+    padding-bottom: 48px;
+    width: 960px;
+}
+
+.card-grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 48px 20px;
+    margin: 16px 0px 0px;
+}
