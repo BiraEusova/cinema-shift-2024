@@ -1,0 +1,17 @@
+{
+  "header" : {
+    "profile": "Профиль",
+    "tickets": "Билеты",
+    "login": "Войти",
+    "logout": "Выйти"
+  },
+  "buttons" : {
+    "more" : "Подробнее",
+    "back" : "Назад"
+  },
+  "pages" : {
+    "affiche" : {
+      "title": "Афиша"
+    }
+  }
+}

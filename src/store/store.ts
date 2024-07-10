@@ -1,9 +1,11 @@
 import {configureStore} from "@reduxjs/toolkit";
-import filmsReducer from "./reducers/filmsSlice";
+import afficheReducer from "./reducers/afficheSlice.ts";
+import filmReducer from "./reducers/filmSlice.ts";
 
 const store = configureStore({
         reducer: {
-            films: filmsReducer
+            affiche: afficheReducer,
+            film: filmReducer
         }
     }
 );

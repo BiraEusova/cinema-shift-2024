@@ -6,13 +6,13 @@
     margin: 0 16px;
 }
 
-.content-container {
+.container {
     margin-top: 48px;
     padding-bottom: 48px;
     width: 960px;
 }
 
-.card-grid-container {
+.grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 48px 20px;

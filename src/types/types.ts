@@ -1,5 +1,3 @@
-//TODO: нормально ли вообще вот так самому типы определять
-
 export type Film = {
     id: string,
     name: string,
@@ -19,14 +17,12 @@ export type Film = {
     country: Country
 }
 
-//TODO: не знаю как назвать тип и actor и director
 export type FilmPerson = {
     id: string,
     professions: [string],
     fullName: string
 }
 
-//TODO: почему где-то id это строка, а где-то число
 export type Country = {
     id: number,
     code: string,

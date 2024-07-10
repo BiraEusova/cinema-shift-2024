@@ -12,14 +12,14 @@
     border-bottom: 1px solid #CED2DA;
 }
 
-.header-content {
+.content {
     display: flex;
     align-items: center;
     justify-content: space-between;
     width: 960px;
 }
 
-.header-nav {
+.nav {
     display: flex;
     flex-direction: row;
     gap: 32px;

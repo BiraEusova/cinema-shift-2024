@@ -1,0 +1,99 @@
+.container {
+    margin-top: 24px;
+    padding-bottom: 48px;
+    width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.film {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 32px;
+}
+
+.info {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+
+.film h1 {
+    font-family: Inter, sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #141C24;
+    margin: 0;
+    text-align: left;
+}
+
+.subtitle {
+    margin: 0;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #637083;
+}
+
+.description {
+    margin: 0;
+    text-align: left;
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #344051;
+}
+
+.poster {
+    width: 300px;
+    height: 0;
+    padding-top: 300px;
+    position: relative;
+}
+
+.poster img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    loading: lazy;
+    display: block;
+    object-fit: cover;
+}
+
+.productionAndKind {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: fit-content;
+    max-width: 50%;
+    padding: 8px 16px;
+    background: #F5F5F8;
+    border-radius: 8px 0 0 0;
+}
+
+.production {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    color: #141C24;
+}
+
+.kind {
+    font-family: Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 0;
+    color: #141C24;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}

@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import {Film} from "../../types";
-import {fetchFilms} from "../actions/filmsActionCreator.ts";
+import {fetchFilms} from "../actions/afficheActionCreator.ts";
 
 type FilmsState = {
     films: [Film],
@@ -12,7 +12,7 @@ const initialState : FilmsState= {
     isLoading: true,
     error: ''
 }
-export const filmsSlice = createSlice({
+export const afficheSlice = createSlice({
     name: 'films',
     initialState,
     reducers: {
@@ -30,6 +30,6 @@ export const filmsSlice = createSlice({
     }
 })
 
-export const { filmsFetching, filmsFetchingSuccess, filmsFetchingError } = filmsSlice.actions
+export const { filmsFetching, filmsFetchingSuccess, filmsFetchingError } = afficheSlice.actions
 
-export default filmsSlice.reducer
+export default afficheSlice.reducer
