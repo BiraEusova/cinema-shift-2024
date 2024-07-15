@@ -1,6 +1,6 @@
 import {createBrowserRouter} from "react-router-dom";
-import Affiche from "./pages/Affiche/Affiche.tsx";
 import FilmPage from "./pages/FilmPage/FilmPage.tsx";
+import Affiche from "./pages/Affiche/Affiche.tsx";
 
 export const router = createBrowserRouter([
     {

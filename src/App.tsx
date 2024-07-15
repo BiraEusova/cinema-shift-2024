@@ -1,11 +1,9 @@
-import Header from "./components/Header/Header.tsx";
 import { RouterProvider } from "react-router-dom";
 import {router} from "./router.tsx";
 import './App.css'
+import {Header} from "./components";
 
 const App = () => {
-
-    //TODO: что такое переменные CSS
 
     return (
         <>

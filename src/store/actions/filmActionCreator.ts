@@ -1,4 +1,4 @@
-import {getFilm} from "../../api/requests.ts";
+import {getFilm} from "@/api/requests.ts";
 import {AppDispatch} from "../store.ts";
 import {filmSlice} from "../reducers/filmSlice.ts";
 

@@ -1,6 +1,6 @@
 import { api } from './instance';
 import {AxiosError, AxiosResponse} from "axios";
-import {Film} from "../types";
+import {Film} from "@/types";
 
 //TODO: как правильно типизировать запросы
 

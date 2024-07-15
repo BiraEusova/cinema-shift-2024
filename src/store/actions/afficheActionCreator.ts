@@ -1,4 +1,4 @@
-import {getFilmsToday} from "../../api/requests.ts";
+import {getFilmsToday} from "@/api/requests.ts";
 import {AppDispatch, RootState} from "../store.ts";
 import {afficheSlice} from "../reducers/afficheSlice.ts";
 

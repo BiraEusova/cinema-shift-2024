@@ -1,11 +1,11 @@
-import logo from '../../assets/logo.svg'
-import login from '../../assets/login.svg'
-import user from '../../assets/user.svg'
-import ticket from '../../assets/ticket.svg'
+import logo from '@/assets/logo.svg'
+import login from '@/assets/login.svg'
+import user from '@/assets/user.svg'
+import ticket from '@/assets/ticket.svg'
 import styles from './Header.module.css'
-import HeaderButton from "../../ui/HeaderButton.tsx";
-import text from "../../constants/text.json";
-const Header = () => {
+import HeaderButton from "@/ui/HeaderButton.tsx";
+import text from "@/constants/text.json";
+export const Header = () => {
 
     return (
         <header className={styles.header}>
@@ -20,5 +20,3 @@ const Header = () => {
         </header>
     );
 }
-
-export default Header

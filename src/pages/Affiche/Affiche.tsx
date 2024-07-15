@@ -1,10 +1,10 @@
-import FilmCard from "../../components/FilmCard/FilmCard.tsx";
 import {useEffect} from "react";
-import Spin from "../../ui/Spin.tsx";
-import {useAppDispatch, useAppSelector} from "../../store/hook.ts";
-import {fetchFilms} from "../../store/actions/afficheActionCreator.ts";
-import text from "../../constants/text.json";
+import Spin from "@/ui/Spin.tsx";
+import {useAppDispatch, useAppSelector} from "@/store/hook.ts";
+import {fetchFilms} from "@/store/actions/afficheActionCreator.ts";
+import text from "@/constants/text.json";
 import styles from './Affiche.module.css'
+import {FilmCard} from "@/components";
 
 const Affiche = () => {
 

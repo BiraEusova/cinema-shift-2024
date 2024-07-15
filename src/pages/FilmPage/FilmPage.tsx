@@ -1,11 +1,11 @@
-import BackButton from "../../ui/BackButton.tsx";
+import BackButton from "@/ui/BackButton.tsx";
 import {useParams} from "react-router-dom";
 import React, {useEffect} from "react";
-import Spin from "../../ui/Spin.tsx";
-import Rating from "../../ui/Rating.tsx";
-import {useAppDispatch, useAppSelector} from "../../store/hook.ts";
-import {fetchFilm} from "../../store/actions/filmActionCreator.ts";
-import {BASE_URL, REGX_YEAR} from "../../constants";
+import Spin from "@/ui/Spin.tsx";
+import Rating from "@/ui/Rating.tsx";
+import {useAppDispatch, useAppSelector} from "@/store/hook.ts";
+import {fetchFilm} from "@/store/actions/filmActionCreator.ts";
+import {BASE_URL, REGX_YEAR} from "@/constants";
 import styles from './FilmPage.module.css'
 
 const FilmPage = () => {

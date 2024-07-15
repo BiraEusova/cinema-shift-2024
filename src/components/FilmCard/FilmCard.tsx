@@ -1,12 +1,12 @@
-import Rating from "../../ui/Rating.tsx";
-import {Film} from "../../types";
-import {BASE_URL, MORE_BUTTON, REGX_YEAR} from "../../constants"
+import Rating from "@/ui/Rating.tsx";
+import {Film} from "@/types";
+import {BASE_URL, REGX_YEAR} from "@/constants"
 import {Link} from "react-router-dom";
 import styles from './FilmCard.module.css'
 import React from "react";
+import text from "@/constants/text.json"
 
-
-const FilmCard = (props: {film: Film}) => {
+export const FilmCard = (props: {film: Film}) => {
 
     const film = props.film;
     const genres = film.genres.join(", ");
@@ -33,12 +33,9 @@ const FilmCard = (props: {film: Film}) => {
 
                 <Rating rating={film.userRatings.imdb} kinopoiskRating={film.userRatings.kinopoisk}/>
 
-
-                <Link className={styles.moreButton} to={`/film/${film.id}`}>{MORE_BUTTON}</Link>
+                <Link className={styles.moreButton} to={`/film/${film.id}`}>{text.buttons.more}</Link>
 
             </div>
         </div>
     )
 }
-
-export default FilmCard

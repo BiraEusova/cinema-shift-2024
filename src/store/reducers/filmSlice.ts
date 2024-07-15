@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
-import {Film} from "../../types";
+import {Film} from "@/types";
 
 type FilmState = {
     film: Film | undefined,
